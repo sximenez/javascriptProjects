@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>binaryTranslator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Remove input arrows in Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Remove input arrows in Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    .font-main {
+      font-family: 'Inconsolata', sans-serif;
+    }
+
+    @media (max-width: 767px) {
+      .phone {
+        height: calc(100vh - 90px - 64px);
+      }
+    }
+  </style>
+
+</head>
+
+<body class="h-screen min-w-[320px] font-main bg-slate-100 lg:text-lg">
+
+  <header class="bg-white">
+
+    <!-- NAV BAR -->
+    <nav class="flex items-center justify-between p-4 md:px-10 lg:px-16 max-w-screen-2xl mx-auto">
+
+      <div class="capitalize font-semibold">
+        <h1><span class="text-2xl">binary</span> translator</h1>
+      </div>
+
+      <i class="fa-solid fa-bars fa-xl text-[#808080]"></i>
+
+    </nav>
+
+  </header>
+
+  <!-- ACTIONS BUTTONS -->
+  <div id="button" class="flex items-center gap-x-4 p-4 md:px-10 lg:py-6 lg:px-16 max-w-screen-2xl mx-auto">
+
+    <form action="#" method="get" id="form1" class="flex w-full md:w-1/4 gap-x-4 grow">
+
+      <!-- <input type="button" id="translate" value="translate"
+        class="w-full md:w-[150px] capitalize border border-solid border-slate-200 lg:px-8 py-4 rounded-lg bg-white font-bold shadow-lg text-center focus:outline-none md:focus:outline-offset-0 md:focus:outline-blue-500 cursor-pointer"> -->
+
+      <input form="form2" type="reset" id="form_reset" value="reset"
+        class="w-full md:w-[150px] capitalize border border-solid border-slate-200 lg:px-8 py-4 rounded-lg bg-white font-bold shadow-lg text-center focus:outline-none md:focus:outline-offset-0 md:focus:outline-blue-500 cursor-pointer">
+
+    </form>
+
+  </div>
+
+  <!-- TEXTAREAS -->
+  <div id="inputs" class="phone md:px-10 lg:px-16 max-w-screen-2xl mx-auto">
+
+    <div
+      class="h-full flex flex-col md:flex-row capitalize md:border md:border-solid md:border-slate-200 md:rounded-lg md:shadow-lg px-4 md:px-0">
+
+      <!-- ENGLISH -->
+      <div id="english"
+        class="z-20 h-1/2 md:w-1/2 flex flex-col mb-8 md:mb-0 bg-white border border-solid border-slate-200 md:border-none rounded-lg md:rounded-tr-none md:rounded-br-none border border-solid border-slate-200 md:border-none shadow-lg md:shadow-none">
+
+        <div class="flex items-center gap-x-4 py-4 border-b md:border-r border-solid border-slate-200">
+
+          <h2 class="pl-6 lg:pl-10 font-bold">english</h2>
+          <i class="fa-solid fa-angle-down"></i>
+
+        </div>
+
+        <div>
+
+          <form action="#" method="get" id="form2" class="flex items-center">
+
+            <textarea id="input" maxlength="150" placeholder="Type your favorite line"
+              class="w-full resize-none py-6 px-6 lg:px-10 md:h-[500px] md:overflow-hidden rounded-bl-lg md:border-r text-2xl focus:outline-none md:focus:outline-offset-0 md:focus:outline-blue-500 placeholder:text-xl lg:placeholder:text-2xl placeholder:text-gray-600"></textarea>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <!-- BINARY -->
+      <div id="binary"
+        class="z-10 h-1/2 md:w-1/2 flex flex-col mb-8 md:mb-0 bg-white border border-solid border-slate-200 md:border-none rounded-lg md:rounded-tl-none md:rounded-bl-none border border-solid border-slate-200 md:border-none shadow-lg md:shadow-none">
+
+        <div class="flex items-center gap-x-4 py-4 border-b border-solid border-slate-200">
+
+          <h2 class="pl-6 lg:pl-10 font-bold">binary</h2>
+          <i class="fa-solid fa-angle-down"></i>
+
+        </div>
+
+        <div>
+
+          <div id="output"
+            class="w-full md:h-[500px] resize-none py-6 px-10 rounded-br-lg text-2xl bg-white break-words text-xl"
+            disabled>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="binaryTranslator.js"></script>
+
+</body>
+
+</html>
