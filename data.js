@@ -2,7 +2,7 @@ export const data = [
   {
     "project_name": "temperatureConverter",
     "name": "Temperature converter",
-    "url": "temperatureConverter/temperatureConverter.html"
+    "url": "temperatureConverter/index.html"
   },
   {
     "project_name": "binaryTranslator",
